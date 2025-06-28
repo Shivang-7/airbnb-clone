@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand ms-4" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+    </a>
+
+    <!-- Hamburger for collapsible menu (Bootstrap) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+
+      <!-- Search filters -->
+      <div class="search-bar-container mt-3 mb-3">
+        <form class="search-bar d-flex shadow" action="/listings" method="GET" style="width:fit-content;">
+          <div class="search-section">
+            <div class="section-title">Where</div>
+            <input
+              type="text"
+              name="search"
+              class="form-control section-sub"
+              placeholder="Search destinations"
+              style="border:none; box-shadow:none; padding:0; background:transparent; width:136px; font-size:0.9rem; font-weight:500;"
+            />
+          </div>
+          <div class="divider"></div>
+          <div class="search-section">
+            <div class="section-title">Check in</div>
+            <div class="section-sub">Add dates</div>
+          </div>
+          <div class="divider"></div>
+          <div class="search-section">
+            <div class="section-title">Check out</div>
+            <div class="section-sub">Add dates</div>
+          </div>
+          <div class="divider"></div>
+          <div class="search-section">
+            <div class="section-title">Who</div>
+            <div class="section-sub">Add guests</div>
+          </div>
+          <button class="search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+
+
+      <div class="navbar-nav ms-auto align-items-center gap-3">
+        <a class="nav-link" href="/listings/new">Become a host</a>
+
+        <!-- Hamburger dropdown -->
+        <div class="menu-wrapper me-4 position-relative">
+          <div class="hamburger"
+            onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="dropdown" class="dropdown-menu-custom hidden">
+            <% if (!currUser) { %>
+              <a class="nav-link dropdown-item-custom" href="/signup">Sign up</a>
+              <hr>
+              <a class="nav-link dropdown-item-custom" href="/login">Log in</a>
+            <% } else { %>
+              <a class="nav-link dropdown-item-custom" href="/logout">Log out</a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

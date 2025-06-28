@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="col-6 offset-3 mt-5">
+        <h2 class="mb-5">SignUp on Staybnb</h2>
+        <form action="/signup" method="POST" novalidate class="needs-validation">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input name="username" placeholder="enter username" type="text" class="form-control"
+                    id="username" required />
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a username.
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input name="email" placeholder="enter email" type="email" class="form-control"
+                    id="email" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" placeholder="enter password" type="password" class="form-control"
+                    id="password" required />
+            </div>
+            <button class="btn btn-success">SignUp</button>
+        </form>
+    </div>
