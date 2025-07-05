@@ -10,9 +10,10 @@ A full-stack web application inspired by Airbnb, built as a major project using 
 - [📸 Demo](#-demo)
 - [🚀 How to Run Locally](#-how-to-run-locally)
 - [📁 Folder Structure](#-folder-structure)
-- [📝 Acknowledgements](#-acknowledgements)
-- [🙇‍♂️ Author](#-author)
-- [📄 License](#-license) 
+- [👨‍💻 Author](#-author)
+- [🛡️ License](#-license)
+- [📚 Educational Purpose Disclaimer](#-educational-purpose-disclaimer)
+- [📬 Contact](#-contact)
 
 <br>
 
@@ -112,63 +113,88 @@ Open http://localhost:8080/listings in your browser.
 
 ```
 airbnb-clone/  
-├── controllers/          # Route logic & business operations
-├── contr
-├── models               # Mongoose models (User, Listing, Review)
-├── public               # Static assets (CSS, client-side JS)
-├── routes               # Express route handlers
-├── utils                # Helper functions (e.g., middleware, error handling)
-├── views                # EJS templates (pages, layouts, partials)
-├── .env                   # Environment variables (excluded from Git)
-├── app.js                 # Main Express server entry point
-├── package.json           # Project metadata and dependencies
-└── README.md              # Project documentation
+├── controllers/                 # Route handlers - separates logic from routes
+│   ├── listings.js              # (create,read, update, delete)
+│   ├── reviews.js               
+│   └── users.js                 # user-related actions (login/signup)
+├── init/                        # Initialization and seed data
+│   ├── data.js                  # Dummy data for seeding the database
+│   └── index.js                 # Script to initialize app with seed data
+├── models/                      # Mongoose schemas and models
+│   ├── listing.js               
+│   ├── review.js                
+│   └── user.js                  
+├── public/                      # Public static assets
+│   ├── css/
+│   │   ├── style.css            # General site-wide styling
+│   │   └── rating.css           # CSS for rating stars
+│   └── js/
+│       └── script.js            # JS scripts (client-side)
+├── routes/                      # Express route definitions
+│   ├── listings.js              # Routes for listing CRUD
+│   ├── reviews.js               # Routes for reviews
+│   └── user.js                  # Routes for user auth (login/signup)
+├── utils/                       # Utility/helper functions
+│   ├── ExpressError.js          # Custom error class for Express
+│   └── wrapAsync.js             # Wrapper for catching async route errors
+├── views/                       # EJS templates (frontend views)
+│   ├── includes/                # Partial components reused across pages
+│   │   ├── navbar.ejs           # Navbar partial
+│   │   ├── flash.ejs            # Flash message partial
+│   │   └── footer.ejs           # Footer partial
+│   ├── layouts/                 # Layout templates
+│   │   └── boilerplate.ejs      # Boilerplate HTML with <head>, <body>, etc.
+│   ├── listings/                # Listing-related EJS pages
+│   │   ├── index.ejs            # All listings display page
+│   │   ├── new.ejs              # Form to create a new listing
+│   │   ├── show.ejs             # Detailed view of a listing
+│   │   └── edit.ejs             # Form to edit a listing
+│   ├── reviews/                 # Review-related EJS pages
+│   │   └── review.ejs           # Partial or full view for reviews
+│   ├── users/                   # User-related pages
+│   │   ├── signup.ejs           # User registration page
+│   │   └── login.ejs            # User login page
+│   └── error.ejs                # Error page template
+├── .env                         # Environment variables
+├── .gitignore                   # Files to be ignored by Git (node_modules, .env, etc.)
+├── app.js                       # Entry point of the app (Express setup, middlewares)
+├── cloudConfig.js               # Cloudinary image upload config
+├── middleware.js                # Custom Express middlewares (e.g. isLoggedIn, isAuthor)
+├── package.json                 # Project metadata and dependencies
+└── schema.js                    # Joi validation schemas for form validation
 
-airbnb-clone/  
-├── app.js
-├── cloudConfig.js
-├── controllers/
-│   ├── listings.js
-│   ├── reviews.js
-│   └── users.js
-├── init
-│   ├── data.js
-│   └── index.js
-├── middleware.js
-├── models
-│   ├── listing.js
-│   ├── review.js
-│   └── user.js
-├── public
-│   ├── css
-│   │   ├── style.css
-│   │   └── rating.css
-│   └── js
-│       └── script.js
-├── routes
-│   ├── listings.js
-│   ├── reviews.js
-│   └── user.js
-├── schema.js
-├── utils
-│   ├── ExpressError.js
-│   └── wrapAsync.js
-└── views
-    ├── includes
-    │   ├── navbar.ejs
-    │   ├── flash.ejs
-    │   └── footer.ejs
-    ├── layouts
-    │   └── boilerplate.ejs
-    ├── listings
-    │   ├── index.ejs
-    │   ├── new.ejs
-    │   ├── show.ejs
-    │   └── edit.ejs
-    ├── reviews
-    │   └── review.ejs
-    ├── users
-    │   ├── signup.ejs
-    │   └── login.ejs
-    └── error.ejs
 ```
+
+<br>
+
+## 👨‍💻 Author
+
+**Shivang Yadav**  
+[GitHub](https://github.com/Shivang-7) | [LinkedIn](https://linkedin.com/in/your-linkedin)  
+
+<br>
+
+## 🛡️ License
+
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this project for educational and personal purposes.
+
+<br>
+
+## 📚 Educational Purpose Disclaimer
+
+> **This project is a clone of Airbnb, developed solely for educational and demonstrative purposes.**  
+> It is **not intended for commercial use**, and **Staybnb** is a fictional platform name.  
+> All logos, trademarks, and brand names used are the property of their respective owners.
+
+<br>
+
+## 📬 Contact
+
+If you have any questions, suggestions, or run into issues using this project, please feel free to:
+
+- Open an issue in this repository
+- Reach out to me via email: `your-email@example.com`
+- Connect on [LinkedIn](https://linkedin.com/in/your-linkedin)
+
+Happy coding! 🚀
