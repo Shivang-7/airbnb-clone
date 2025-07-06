@@ -11,7 +11,7 @@ A full-stack web application inspired by Airbnb, built as a major project using 
 - [🚀 How to Run Locally](#-how-to-run-locally)
 - [📁 Folder Structure](#-folder-structure)
 - [👨‍💻 Author](#-author)
-- [🛡️ License](#-license)
+- [🛡️ License](#license)
 - [📚 Educational Purpose Disclaimer](#-educational-purpose-disclaimer)
 - [📬 Contact](#-contact)
 
