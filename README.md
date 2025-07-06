@@ -144,16 +144,16 @@ airbnb-clone/
 │   │   └── footer.ejs           # Footer partial
 │   ├── layouts/                 # Layout templates
 │   │   └── boilerplate.ejs      # Boilerplate HTML with <head>, <body>, etc.
-│   ├── listings/                # Listing-related EJS pages
+│   ├── listings/                
 │   │   ├── index.ejs            # All listings display page
 │   │   ├── new.ejs              # Form to create a new listing
 │   │   ├── show.ejs             # Detailed view of a listing
 │   │   └── edit.ejs             # Form to edit a listing
-│   ├── reviews/                 # Review-related EJS pages
+│   ├── reviews/                 
 │   │   └── review.ejs           # Partial or full view for reviews
 │   ├── users/                   # User-related pages
-│   │   ├── signup.ejs           # User registration page
-│   │   └── login.ejs            # User login page
+│   │   ├── signup.ejs           
+│   │   └── login.ejs            
 │   └── error.ejs                # Error page template
 ├── .env                         # Environment variables
 ├── .gitignore                   # Files to be ignored by Git (node_modules, .env, etc.)
@@ -170,7 +170,7 @@ airbnb-clone/
 ## 👨‍💻 Author
 
 **Shivang Yadav**  
-[GitHub](https://github.com/Shivang-7) | [LinkedIn](https://linkedin.com/in/your-linkedin)  
+[GitHub](https://github.com/Shivang-7) | [LinkedIn](https://www.linkedin.com/in/shivang-yadav108/)  
 
 <br>
 
@@ -183,7 +183,7 @@ You are free to use, modify, and distribute this project for educational and per
 
 ## 📚 Educational Purpose Disclaimer
 
-> **This project is a clone of Airbnb, developed solely for educational and demonstrative purposes.**  
+> **This project is a clone of Airbnb website, developed solely for educational and demonstrative purposes.**  
 > It is **not intended for commercial use**, and **Staybnb** is a fictional platform name.  
 > All logos, trademarks, and brand names used are the property of their respective owners.
 
@@ -194,7 +194,8 @@ You are free to use, modify, and distribute this project for educational and per
 If you have any questions, suggestions, or run into issues using this project, please feel free to:
 
 - Open an issue in this repository
-- Reach out to me via email: `your-email@example.com`
-- Connect on [LinkedIn](https://linkedin.com/in/your-linkedin)
+- Reach out to me via [email](mailto:yadavshivang2108@gmail.com)
+- Connect on [LinkedIn](https://www.linkedin.com/in/shivang-yadav108/)
 
-Happy coding! 🚀
+<br>
+Happy coding! 😊
