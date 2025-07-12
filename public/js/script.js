@@ -32,3 +32,20 @@ document.addEventListener("click", function (event) { // Close on outside click
     dropdown.classList.add("hidden");
   }
 });
+
+// Mobile Dropdown Panel
+const mobileDropdown = document.getElementById("mobileDropdown");
+function toggleMobileDropdown(event) {
+  event.stopPropagation();
+  if (mobileDropdown) {
+    mobileDropdown.classList.toggle("hidden");
+  }
+}
+document.addEventListener("click", function (event) {
+  if (mobileDropdown && !mobileDropdown.classList.contains("hidden")) {
+    const isClickInside = event.target.closest("#mobileDropdown") || event.target.closest(".navbar-toggler");
+    if (!isClickInside) {
+      mobileDropdown.classList.add("hidden");
+    }
+  }
+});

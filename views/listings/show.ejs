@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 
     <body>
-        <div class="col-10 offset-2 mt-4">
+        <div class="col-10 offset-2 mt-4 show-listing-container" style="width:100%; max-width:900px;">
             <h3>
                 <%= listing.title %>
             </h3><br>
@@ -25,7 +25,7 @@
 
         <!-- Authorization -> if currUser is owner of that listing, then only edit & delete -->
         <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
-            <div class="btns">
+            <div class="btns show-btns" style="width:100%; max-width:900px;">
                 <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark offset-2 edit-btn">Edit</a>
                 <br>
                 <form method="POST" action="/listings/<%= listing._id %>?_method=DELETE">
@@ -34,7 +34,7 @@
             </div>
             <% } %>
 
-                <div class="col-7 offset-2 mb-3">
+                <div class="col-7 offset-2 mb-3 show-review-container" style="width:100%; max-width:900px;">
                     <% if(currUser){ %>
                         <hr />
                         <p><b>Leave a Review</b></p>
@@ -95,7 +95,7 @@
                         <% } %> 
                 </div>
 
-        <div class="col-7 offset-2 mt-4">
+        <div class="col-7 offset-2 mt-4 show-map-container" style="width:100%; max-width:900px;">
             <hr>
             <br>
             <h4>Where you’ll be</h4>

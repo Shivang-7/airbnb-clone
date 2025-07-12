@@ -111,11 +111,9 @@ body{
     padding: 6px 12px;
     gap: 10px;
   }
-
   .section-title {
     font-size: 0.65rem;
   }
-
   .section-sub {
     font-size: 0.75rem;
   }
@@ -190,6 +188,11 @@ body{
     background-color: #fe424d !important;
     border: none !important;
 }
+@media (min-width: 992px) {
+  .btns {
+    margin-left: 5%;
+  }
+}
 
 
 /* Map */
@@ -198,4 +201,190 @@ body{
     width: 49vw;
     margin: 20px 0 20px 0;
     border-radius: 20px;
+}
+
+/* Mobile Dropdown Panel */
+.mobile-dropdown-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.mobile-dropdown-panel .nav-link {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222 !important;
+  padding: 0.5rem 0.7rem;
+}
+.mobile-dropdown-panel .nav-link:hover {
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+.mobile-dropdown-panel .search-bar {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  width: 100%;
+}
+.mobile-dropdown-panel .search-bar input {
+  font-size: 0.95rem;
+}
+.mobile-dropdown-panel.hidden {
+  display: none !important;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .mobile-dropdown-panel {
+    border-bottom: 1px solid #dedede !important;
+  }
+  .container {
+    margin-top: 50px !important;
+  }
+}
+@media (max-width: 909px) and (min-width: 600px) {
+  .navbar-nav .explore-link {
+    display: none !important;
+  }
+  .search-bar .search-section:not(:first-child) {
+    display: none !important;
+  }
+  .search-bar .divider {
+    display: none !important;
+  }
+}
+
+/* Responsive containers for forms and show page */
+@media (max-width: 992px) {
+  .col-8, .col-7, .col-6, .col-10 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .offset-2, .offset-3, .offset-5 {
+    margin-left: 0 !important;
+  }
+  .edit-listing-container,
+  .show-listing-container,
+  .show-review-container,
+  .show-map-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+/* Responsive form fields and buttons */
+@media (max-width: 768px) {
+  .form-control, textarea, input, select {
+    font-size: 1rem !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+  .btn, .edit-btn {
+    width: 100% !important;
+    margin-bottom: 0.5rem;
+  }
+  .btns {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .show-img {
+    height: 28vh !important;
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  #map {
+    width: 100vw !important;
+    min-width: 0 !important;
+    border-radius: 12px !important;
+    height: 250px !important;
+  }
+  .alert {
+    width: 95vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .show-img {
+    height: 18vh !important;
+  }
+  #map {
+    height: 160px !important;
+  }
+  .starability-slot {
+    width: 100px;
+    min-height: 40px;
+  }
+  .search-button {
+    width: 36px;
+    min-width: 36px;
+    max-width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+  }
+  .alert {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+/* Flash and error message responsiveness */
+.alert {
+  max-width: 95vw;
+  margin: 1rem auto;
+  font-size: 1.08rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  word-break: break-word;
+}
+@media (max-width: 768px) {
+  .alert {
+    max-width: 90vw;
+    padding: 0.5em 1em;
+    font-size: 0.95em;
+  }
+}
+@media (max-width: 480px) {
+  .alert {
+    max-width: 85vw;
+    padding: 0.25em 0.5em;
+    font-size: 0.85em;
+  }
+}
+
+/* Error page centering */
+.error-container, .not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.error-container h1, .not-found-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.error-container p, .not-found-container p {
+  font-size: 1.1rem;
+  color: #555;
 }

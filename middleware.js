@@ -2,6 +2,7 @@ const Listing = require("./models/listing.js");
 const Review = require("./models/review.js");
 const ExpressError = require("./utils/ExpressError.js");
 const { listingSchema, reviewSchema } = require("./schema.js");
+const rateLimit = require('express-rate-limit');
 
 
 
@@ -71,3 +72,20 @@ module.exports.isReviewAuthor = ( async (req, res, next) => {
     }
     next();
 });
+
+
+
+// General rate limiter (e.g., for login/signup)
+const authLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10, // limit each IP to 10 requests per windowMs
+    message: "Too many attempts from this IP, please try again after 15 minutes."
+});
+// Stricter limiter for review creation
+const reviewLimiter = rateLimit({
+    windowMs: 10 * 60 * 1000, // 10 minutes
+    max: 5,
+    message: "Too many reviews submitted from this IP, please try again later."
+});
+module.exports.authLimiter = authLimiter;
+module.exports.reviewLimiter = reviewLimiter;

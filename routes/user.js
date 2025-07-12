@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const passport = require("passport");
-const { saveRedirectUrl } = require("../middleware.js");
+const { saveRedirectUrl, authLimiter } = require("../middleware.js");
 
 const usersController = require("../controllers/users.js");
 
@@ -10,12 +10,13 @@ const usersController = require("../controllers/users.js");
 // signup route
 router.route("/signup")
     .get(usersController.renderSignupForm)
-    .post(wrapAsync(usersController.signupUser));
+    .post(authLimiter, wrapAsync(usersController.signupUser));
 
 // login route
 router.route("/login")
     .get(usersController.renderLoginForm)
     .post(
+        authLimiter,
         saveRedirectUrl, // before login page we will save our original redirect path
         passport.authenticate("local", { failureRedirect: "/login", failureFlash: true }),
         // passport provides an authenticate middleware used for authentication before login 
