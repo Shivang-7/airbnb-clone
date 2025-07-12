@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const wrapAsync = require("../utils/wrapAsync.js");
 const passport = require("passport");
-const { saveRedirectUrl, authLimiter } = require("../middleware.js");
+const { saveRedirectUrl } = require("../middleware.js");
+const authLimiter = (req, res, next) => next(); // temporarily relaxed for demo purposes to ensure smooth access
 
 const usersController = require("../controllers/users.js");
 
