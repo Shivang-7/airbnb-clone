@@ -75,16 +75,16 @@ module.exports.isReviewAuthor = ( async (req, res, next) => {
 
 
 
-// General rate limiter (e.g., for login/signup)
+// General rate limiter (for login/signup)
 const authLimiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 10, // limit each IP to 10 requests per windowMs
+    max: 15, // limit each IP to 10 requests per windowMs
     message: "Too many attempts from this IP, please try again after 15 minutes."
 });
 // Stricter limiter for review creation
 const reviewLimiter = rateLimit({
-    windowMs: 10 * 60 * 1000, // 10 minutes
-    max: 5,
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 15,
     message: "Too many reviews submitted from this IP, please try again later."
 });
 module.exports.authLimiter = authLimiter;
