@@ -70,6 +70,13 @@ A full-stack web application inspired by Airbnb, built as a major project using 
 <br>
 
 ## 📸 Demo
+🎥 **Video Walkthrough**  
+Watch the full project in action here:  
+![Watch the Demo](https://drive.google.com/file/d/1EFAH1JnooQ5cK5ak_26bnPxGEiGyjrxj/view?usp=drive_link)
+
+🖼️ **Screenshots**
+Homepage
+
 
 
 <br>
