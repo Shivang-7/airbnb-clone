@@ -37,6 +37,7 @@ A full-stack web application inspired by Airbnb, built as a major project using 
 - **MongoDB Session Storage** using `connect-mongo` for persistent login sessions  
 - **Flash Messaging System** for user feedback on all major actions  
 - **Custom Error Handling** using Express middleware and centralized error classes  
+- Added **API Rate Limiting** using `express-rate-limit` to safeguard server from misuse or too many requests  
 - **Responsive UI** built with EJS templating, Bootstrap styling, and server-side rendering  
 
 <br>
@@ -70,14 +71,17 @@ A full-stack web application inspired by Airbnb, built as a major project using 
 <br>
 
 ## 📸 Demo
-🎥 **Video Walkthrough**  
-Watch the full project in action here:  
-![Watch the Demo](https://drive.google.com/file/d/1EFAH1JnooQ5cK5ak_26bnPxGEiGyjrxj/view?usp=drive_link)
 
-🖼️ **Screenshots**
-Homepage
+#### 🎥 Video Walkthrough  
+[![Watch the Demo](./assets/screenshots/homepage.png)](https://drive.google.com/file/d/1EFAH1JnooQ5cK5ak_26bnPxGEiGyjrxj/view?usp=drive_link)  
+<sub>Click the image above to watch a walkthrough of the project (preview shows homepage)</sub>
 
+#### 🖼️ Screenshots
+Listings Page
+![Listings](./assets/screenshots/listing.png)
 
+Map Integration
+![Map](./assets/screenshots/map.png)
 
 <br>
 
